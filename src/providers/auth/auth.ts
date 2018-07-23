@@ -26,6 +26,7 @@ export class AuthProvider {
       .createUserWithEmailAndPassword(email, password)
       .then(value => {
         localStorage.setItem('uid', value.uid);
+        location.reload();
       })
       .catch(err => {
         console.log('Something went wrong:', err.message);
@@ -38,6 +39,7 @@ export class AuthProvider {
       .signInWithEmailAndPassword(email, password)
       .then(value => {
         localStorage.setItem('uid', value.uid);
+        location.reload();
       })
       .catch(err => {
         console.log('Something went wrong:', err.message);
