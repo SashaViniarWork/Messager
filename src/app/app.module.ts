@@ -22,6 +22,7 @@ import {FIREBASE_CONFIG} from './firebase.cred';
 import {Contact} from "@ionic-native/contacts";
 import {LocalNotifications} from '@ionic-native/local-notifications';
 import {Contacts} from "@ionic-native/contacts";
+import {MessagesPage} from '../pages/messages/messages';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import {Contacts} from "@ionic-native/contacts";
     HomePage,
     TabsPage,
     LoginPage,
+    MessagesPage,
     RegistrationPage
   ],
   imports: [
@@ -45,6 +47,7 @@ import {Contacts} from "@ionic-native/contacts";
     MyApp,
     AboutPage,
     ContactPage,
+    MessagesPage,
     HomePage,
     TabsPage,
     LoginPage,
