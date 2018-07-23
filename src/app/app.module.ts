@@ -20,6 +20,7 @@ import {AngularFireModule} from 'angularfire2';
 import {AngularFireDatabaseModule} from 'angularfire2/database';
 import {FIREBASE_CONFIG} from './firebase.cred';
 import {Contact} from "@ionic-native/contacts";
+import {LocalNotifications} from '@ionic-native/local-notifications';
 
 @NgModule({
   declarations: [
@@ -53,6 +54,7 @@ import {Contact} from "@ionic-native/contacts";
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     AuthProvider,
+    LocalNotifications,
     Contact
   ]
 })
