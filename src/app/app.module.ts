@@ -19,6 +19,7 @@ import {AngularFireAuthModule} from 'angularfire2/auth';
 import {AngularFireModule} from 'angularfire2';
 import {AngularFireDatabaseModule} from 'angularfire2/database';
 import {FIREBASE_CONFIG} from './firebase.cred';
+import {Contact} from "@ionic-native/contacts";
 
 @NgModule({
   declarations: [
@@ -51,7 +52,8 @@ import {FIREBASE_CONFIG} from './firebase.cred';
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    AuthProvider
+    AuthProvider,
+    Contact
   ]
 })
 export class AppModule {
