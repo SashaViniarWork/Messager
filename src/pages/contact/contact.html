@@ -7,11 +7,8 @@
 </ion-header>
 
 <ion-content>
-  <ion-list>
-    <ion-list-header>Follow us on Twitter</ion-list-header>
-    <ion-item>
-      <ion-icon name="ionic" item-start></ion-icon>
-      @ionicframework
-    </ion-item>
-  </ion-list>
+  <div *ngFor="let item of allContacts">
+    <ion-item *ngIf="item.displayName !== null"> {{item.displayName}} </ion-item>
+    <ion-item *ngIf="item.displayName === null"> {{item.emails[0].value}} </ion-item>
+  </div>
 </ion-content>
