@@ -21,6 +21,8 @@ import {AngularFireDatabaseModule} from 'angularfire2/database';
 import {FIREBASE_CONFIG} from './firebase.cred';
 import {Contact} from "@ionic-native/contacts";
 import {LocalNotifications} from '@ionic-native/local-notifications';
+import {Contacts} from "@ionic-native/contacts";
+import {MessagesPage} from '../pages/messages/messages';
 
 @NgModule({
   declarations: [
@@ -30,6 +32,7 @@ import {LocalNotifications} from '@ionic-native/local-notifications';
     HomePage,
     TabsPage,
     LoginPage,
+    MessagesPage,
     RegistrationPage
   ],
   imports: [
@@ -44,6 +47,7 @@ import {LocalNotifications} from '@ionic-native/local-notifications';
     MyApp,
     AboutPage,
     ContactPage,
+    MessagesPage,
     HomePage,
     TabsPage,
     LoginPage,
@@ -55,6 +59,7 @@ import {LocalNotifications} from '@ionic-native/local-notifications';
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     AuthProvider,
     LocalNotifications,
+    Contacts,
     Contact
   ]
 })
