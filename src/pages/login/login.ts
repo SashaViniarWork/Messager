@@ -3,6 +3,7 @@ import { IonicPage, NavController, NavParams, ViewController, App } from 'ionic-
 import {RegistrationPage} from "../registration/registration";
 import {AuthProvider} from "../../providers/auth/auth";
 import {TabsPage} from "../tabs/tabs";
+import {HomePage} from "../home/home";
 
 /**
  * Generated class for the LoginPage page.
@@ -34,8 +35,6 @@ export class LoginPage {
 
   Login() {
     this.auth.login(this.email, this.password);
-    if (localStorage.getItem('uid') !== null) {
-    }
   }
 
 }
