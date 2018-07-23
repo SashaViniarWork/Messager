@@ -20,6 +20,7 @@ import {AngularFireModule} from 'angularfire2';
 import {AngularFireDatabaseModule} from 'angularfire2/database';
 import {FIREBASE_CONFIG} from './firebase.cred';
 import {Contacts} from "@ionic-native/contacts";
+import { GetListChatsProvider } from '../providers/get-list-chats/get-list-chats';
 
 @NgModule({
   declarations: [
@@ -53,7 +54,8 @@ import {Contacts} from "@ionic-native/contacts";
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     AuthProvider,
-    Contacts
+    Contacts,
+    GetListChatsProvider
   ]
 })
 export class AppModule {
