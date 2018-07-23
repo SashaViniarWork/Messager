@@ -22,7 +22,11 @@ import {FIREBASE_CONFIG} from './firebase.cred';
 import {Contact} from "@ionic-native/contacts";
 import {LocalNotifications} from '@ionic-native/local-notifications';
 import {Contacts} from "@ionic-native/contacts";
+
+import { GetListChatsProvider } from '../providers/get-list-chats/get-list-chats';
+
 import {MessagesPage} from '../pages/messages/messages';
+
 
 @NgModule({
   declarations: [
@@ -58,6 +62,7 @@ import {MessagesPage} from '../pages/messages/messages';
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     AuthProvider,
+    GetListChatsProvider
     LocalNotifications,
     Contacts,
     Contact
