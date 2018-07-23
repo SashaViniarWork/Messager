@@ -19,8 +19,14 @@ import {AngularFireAuthModule} from 'angularfire2/auth';
 import {AngularFireModule} from 'angularfire2';
 import {AngularFireDatabaseModule} from 'angularfire2/database';
 import {FIREBASE_CONFIG} from './firebase.cred';
+import {Contact} from "@ionic-native/contacts";
+import {LocalNotifications} from '@ionic-native/local-notifications';
 import {Contacts} from "@ionic-native/contacts";
+
 import { GetListChatsProvider } from '../providers/get-list-chats/get-list-chats';
+
+import {MessagesPage} from '../pages/messages/messages';
+
 
 @NgModule({
   declarations: [
@@ -30,6 +36,7 @@ import { GetListChatsProvider } from '../providers/get-list-chats/get-list-chats
     HomePage,
     TabsPage,
     LoginPage,
+    MessagesPage,
     RegistrationPage
   ],
   imports: [
@@ -44,6 +51,7 @@ import { GetListChatsProvider } from '../providers/get-list-chats/get-list-chats
     MyApp,
     AboutPage,
     ContactPage,
+    MessagesPage,
     HomePage,
     TabsPage,
     LoginPage,
@@ -54,8 +62,10 @@ import { GetListChatsProvider } from '../providers/get-list-chats/get-list-chats
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     AuthProvider,
-    Contacts,
     GetListChatsProvider
+    LocalNotifications,
+    Contacts,
+    Contact
   ]
 })
 export class AppModule {
