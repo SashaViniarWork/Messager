@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, ViewController, App } from 'ionic-angular';
+import {RegistrationPage} from "../registration/registration";
+import {AuthProvider} from "../../providers/auth/auth";
+import {TabsPage} from "../tabs/tabs";
 
 /**
  * Generated class for the LoginPage page.
@@ -14,12 +17,25 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'login.html',
 })
 export class LoginPage {
-
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  email: any;
+  password: any;
+  constructor(public navCtrl: NavController, public navParams: NavParams, public auth: AuthProvider) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad LoginPage');
+  }
+
+  GoToRegistartion() {
+    // this.viewCtrl.dismiss();
+    // this.appCtrl.getRootNav().push(RegistrationPage);
+    this.navCtrl.push(RegistrationPage);
+  }
+
+  Login() {
+    this.auth.login(this.email, this.password);
+    if (localStorage.getItem('uid') !== null) {
+    }
   }
 
 }
