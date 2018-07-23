@@ -56,8 +56,8 @@ import {Contacts} from "@ionic-native/contacts";
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     AuthProvider,
     LocalNotifications,
-    Contact,
-    Contacts
+    Contacts,
+    Contact
   ]
 })
 export class AppModule {
