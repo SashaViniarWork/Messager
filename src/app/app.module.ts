@@ -19,7 +19,8 @@ import {AngularFireAuthModule} from 'angularfire2/auth';
 import {AngularFireModule} from 'angularfire2';
 import {AngularFireDatabaseModule} from 'angularfire2/database';
 import {FIREBASE_CONFIG} from './firebase.cred';
-import {Contacts} from "@ionic-native/contacts";
+import {Contact} from "@ionic-native/contacts";
+import {LocalNotifications} from '@ionic-native/local-notifications';
 
 @NgModule({
   declarations: [
@@ -53,7 +54,8 @@ import {Contacts} from "@ionic-native/contacts";
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     AuthProvider,
-    Contacts
+    LocalNotifications,
+    Contact
   ]
 })
 export class AppModule {
