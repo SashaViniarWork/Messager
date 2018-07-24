@@ -62,7 +62,7 @@ import {MessagesPage} from '../pages/messages/messages';
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     AuthProvider,
-    GetListChatsProvider
+    GetListChatsProvider,
     LocalNotifications,
     Contacts,
     Contact
